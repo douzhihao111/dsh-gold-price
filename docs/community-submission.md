@@ -52,6 +52,8 @@ git push origin v0.1.0
 
 npm 版本能让插件市场显示下载量，也能让 `dsh plugin add dsh-gold-price` 直接安装。
 
+手动发布：
+
 ```bash
 npm login
 cd dsh-gold-price
@@ -64,7 +66,9 @@ npm publish --access public
 npm pack --dry-run
 ```
 
-预期发布内容：`package.json`、`cordis.patch.yml`、`lib/index.js`、`lib/client.js`、`README.md`、`README.en.md`、`LICENSE`、`preview.png`、`screenshots.json`。
+预期发布内容：`package.json`、`cordis.patch.yml`、`lib/index.js`、`lib/client.js`、`README.md`、`README.en.md`、`CHANGELOG.md`、`LICENSE`、`icon.png`、`preview.png`、`screenshots.json`。
+
+也可以用仓库里的 `.github/workflows/publish.yml`：在 GitHub 仓库 **Settings → Secrets and variables → Actions** 添加 `NPM_TOKEN`（npm 的 Automation token），然后发布一个 Release；工作流会先校验再 `npm publish --access public`。
 
 ## 3. 提交到开放插件市场（dshopen.org）
 
