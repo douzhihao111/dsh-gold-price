@@ -144,10 +144,28 @@ icon: https://raw.githubusercontent.com/douzhihao/dsh-gold-price/main/preview.pn
 - 关注 Issue/PR 的复查意见；`dshopen.org` 超过 7 天不回复会先关闭 Issue，之后仍可重新提交。
 - 新版本发布后，`dshopen.org` 默认跟随 npm `latest`；`awesome-dsh-plugin` 的条目跟随仓库数据。
 
+## 本地发布状态
+
+- 本地 git 仓库已初始化，默认分支 `main`
+- 已提交并打 tag：`v0.1.0`
+- 当前 commit：以 `git rev-parse v0.1.0^{commit}` 为准
+- remote 已指向：`https://github.com/douzhihao/dsh-gold-price.git`
+- 已生成发布包：`dsh-gold-price-0.1.0.tgz`
+
 ## 当前阻塞
 
-本机没有检测到 GitHub CLI 登录、npm 登录或 Git 提交身份。要直接完成第 1–4 步，需要：
+本机没有检测到 GitHub CLI 登录、npm 登录或可用的 GitHub 凭据，因此无法代替账号完成建仓库、push、npm publish、开 Issue/PR。需要先在本机完成任意一种授权：
 
-1. 提供 GitHub 仓库地址（`douzhihao/dsh-gold-price`），或先在本机完成 `gh auth login` / 配置 Git 用户；
-2. 如要发布 npm，在本机执行 `npm login`（需要 npm 账号与 2FA）；
-3. 确认是以个人账号还是组织账号发布。
+1. **GitHub**：在 GitHub 网页创建空仓库 `douzhihao/dsh-gold-price`（不要初始化 README），然后在本机配置 SSH key 或 HTTPS 凭据；或者安装 GitHub CLI 后执行 `gh auth login`。
+2. **npm**：在本机执行 `npm login`（需要 npm 账号与 2FA），或者安装 GitHub CLI 之外单独配置 npm token；也可以直接用网页创建 Automation token，加到仓库 Secret `NPM_TOKEN` 由工作流发布。
+
+授权后，下面的命令即可完成发布：
+
+```bash
+cd dsh-gold-price
+git push -u origin main
+git push origin v0.1.0
+npm publish --access public
+```
+
+然后按第 3、4 节提交社区收录。

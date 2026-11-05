@@ -32,6 +32,7 @@ https://github.com/douzhihao/dsh-gold-price
 
 ```text
 npm: dsh-gold-price@0.1.0
+固定提交: 见 `git rev-parse v0.1.0^{commit}` 的输出
 DSH 版本: 0.2.1-rc.5
 系统: macOS (Apple Silicon)
 安装: dsh plugin --profile desktop add dsh-gold-price
