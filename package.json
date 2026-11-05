@@ -1,0 +1,60 @@
+{
+  "name": "dsh-gold-price",
+  "version": "0.1.0",
+  "description": "实时国内金价：上海金 Au99.99、黄金 T+D、上海金与沪金主连",
+  "author": "douzhihao",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douzhihao/dsh-gold-price.git"
+  },
+  "homepage": "https://github.com/douzhihao/dsh-gold-price#readme",
+  "bugs": {
+    "url": "https://github.com/douzhihao/dsh-gold-price/issues"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    "screenshots.json",
+    "preview.png"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "gold",
+    "gold-price",
+    "finance",
+    "market",
+    "sge",
+    "shfe"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}

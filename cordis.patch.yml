@@ -1,0 +1,6 @@
+# dsh-gold-price bundle patch.
+# The bundle only contributes one browser plugin row; the host half is an empty
+# apply() that gives the Loader a row to resolve the package from.
+- insert:
+    - id: gold-price
+      name: dsh-gold-price
