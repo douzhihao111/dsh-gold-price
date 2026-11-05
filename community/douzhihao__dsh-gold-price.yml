@@ -4,4 +4,4 @@ category: ui
 description:
   en: Real-time domestic gold price ticker and panel for the DSH sidebar, covering SGE Au99.99, Gold T+D, Shanghai Gold and SHFE gold front-month, with an intraday chart.
   zh: 在 DSH 侧栏常驻显示国内金价，并提供覆盖上金所 Au99.99、黄金 T+D、上海金与上期所沪金主连的实时面板和日内分时图。
-icon: https://raw.githubusercontent.com/douzhihao/dsh-gold-price/main/preview.png
+icon: https://raw.githubusercontent.com/douzhihao/dsh-gold-price/main/icon.png
