@@ -1,6 +1,6 @@
 # 社区发布清单
 
-本文档把「发到社区」拆成可执行步骤。仓库地址、作者名和 npm 账号已按确认的 GitHub 账号 `douzhihao` 填写。
+本文档把「发到社区」拆成可执行步骤。仓库地址、作者名和 npm 账号已按确认的 GitHub 账号 `douzhihao111` 填写。
 
 ## 0. 发布前检查
 
@@ -21,7 +21,7 @@ cd dsh-gold-price
 git init -b main
 git add .
 git commit -m "feat: real-time domestic gold price panel"
-git remote add origin https://github.com/douzhihao/dsh-gold-price.git
+git remote add origin https://github.com/douzhihao111/dsh-gold-price.git
 git push -u origin main
 ```
 
@@ -33,11 +33,11 @@ git push -u origin main
 ```json
 "repository": {
   "type": "git",
-  "url": "git+https://github.com/douzhihao/dsh-gold-price.git"
+  "url": "git+https://github.com/douzhihao111/dsh-gold-price.git"
 },
-"homepage": "https://github.com/douzhihao/dsh-gold-price#readme",
+"homepage": "https://github.com/douzhihao111/dsh-gold-price#readme",
 "bugs": {
-  "url": "https://github.com/douzhihao/dsh-gold-price/issues"
+  "url": "https://github.com/douzhihao111/dsh-gold-price/issues"
 }
 ```
 
@@ -77,7 +77,7 @@ npm pack --dry-run
 ### 插件地址
 
 ```text
-https://github.com/douzhihao/dsh-gold-price
+https://github.com/douzhihao111/dsh-gold-price
 ```
 
 ### 简短说明
@@ -110,16 +110,16 @@ DSH 版本: 0.2.1-rc.5
 
 在 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) 新建一个文件：
 
-`data/plugins/douzhihao__dsh-gold-price.yml`
+`data/plugins/douzhihao111__dsh-gold-price.yml`
 
 ```yaml
-url: https://github.com/douzhihao/dsh-gold-price
-name: douzhihao/dsh-gold-price
+url: https://github.com/douzhihao111/dsh-gold-price
+name: douzhihao111/dsh-gold-price
 category: ui
 description:
   en: Real-time domestic gold price ticker and panel for the DSH sidebar, covering SGE Au99.99, Gold T+D, Shanghai Gold and SHFE gold front-month, with an intraday chart.
   zh: 在 DSH 侧栏常驻显示国内金价，并提供覆盖上金所 Au99.99、黄金 T+D、上海金与上期所沪金主连的实时面板和日内分时图。
-icon: https://raw.githubusercontent.com/douzhihao/dsh-gold-price/main/preview.png
+icon: https://raw.githubusercontent.com/douzhihao111/dsh-gold-price/main/icon.png
 ```
 
 注意：
@@ -149,14 +149,14 @@ icon: https://raw.githubusercontent.com/douzhihao/dsh-gold-price/main/preview.pn
 - 本地 git 仓库已初始化，默认分支 `main`
 - 已提交并打 tag：`v0.1.0`
 - 当前 commit：以 `git rev-parse v0.1.0^{commit}` 为准
-- remote 已指向：`https://github.com/douzhihao/dsh-gold-price.git`
+- remote 已指向：`https://github.com/douzhihao111/dsh-gold-price.git`
 - 已生成发布包：`dsh-gold-price-0.1.0.tgz`
 
 ## 当前阻塞
 
 本机没有检测到 GitHub CLI 登录、npm 登录或可用的 GitHub 凭据，因此无法代替账号完成建仓库、push、npm publish、开 Issue/PR。需要先在本机完成任意一种授权：
 
-1. **GitHub**：在 GitHub 网页创建空仓库 `douzhihao/dsh-gold-price`（不要初始化 README），然后在本机配置 SSH key 或 HTTPS 凭据；或者安装 GitHub CLI 后执行 `gh auth login`。
+1. **GitHub**：在 GitHub 网页创建空仓库 `douzhihao111/dsh-gold-price`（不要初始化 README），然后在本机配置 SSH key 或 HTTPS 凭据；或者安装 GitHub CLI 后执行 `gh auth login`。
 2. **npm**：在本机执行 `npm login`（需要 npm 账号与 2FA），或者安装 GitHub CLI 之外单独配置 npm token；也可以直接用网页创建 Automation token，加到仓库 Secret `NPM_TOKEN` 由工作流发布。
 
 授权后，下面的命令即可完成发布：

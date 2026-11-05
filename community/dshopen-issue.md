@@ -11,7 +11,7 @@
 ## 插件地址
 
 ```text
-https://github.com/douzhihao/dsh-gold-price
+https://github.com/douzhihao111/dsh-gold-price
 ```
 
 ## 简短说明

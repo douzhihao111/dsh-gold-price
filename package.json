@@ -2,14 +2,14 @@
   "name": "dsh-gold-price",
   "version": "0.1.0",
   "description": "实时国内金价：上海金 Au99.99、黄金 T+D、上海金与沪金主连",
-  "author": "douzhihao",
+  "author": "douzhihao111",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/douzhihao/dsh-gold-price.git"
+    "url": "git+https://github.com/douzhihao111/dsh-gold-price.git"
   },
-  "homepage": "https://github.com/douzhihao/dsh-gold-price#readme",
+  "homepage": "https://github.com/douzhihao111/dsh-gold-price#readme",
   "bugs": {
-    "url": "https://github.com/douzhihao/dsh-gold-price/issues"
+    "url": "https://github.com/douzhihao111/dsh-gold-price/issues"
   },
   "type": "module",
   "main": "lib/index.js",
